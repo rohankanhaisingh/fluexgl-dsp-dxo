@@ -1,0 +1,35 @@
+.app-window {
+    &__container {
+        &__titlebar {
+            background: var(--color-surface-light);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            padding: 5px 10px;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--color-shadow-grey-300);
+
+            &__content, &__controls {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+
+                &__button {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:hover {
+                        background: var(--color-panel-hover);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

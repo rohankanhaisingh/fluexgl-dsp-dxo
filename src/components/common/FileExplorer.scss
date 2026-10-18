@@ -1,0 +1,43 @@
+@mixin FileExplorerItem {
+    display: grid;
+    grid-template-columns: 14px auto;
+    gap: 5px;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    user-select: none;
+
+    span {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    &:hover {
+        background: var(--color-panel-hover);
+    }
+}
+
+.file-explorer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    &__file {
+        @include FileExplorerItem;
+    }
+
+    &__directory {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+
+        &__directory-name {
+            @include FileExplorerItem;
+        }
+
+        &__files {
+            padding-left: 20px;
+        }
+    }
+}

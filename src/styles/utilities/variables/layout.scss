@@ -1,0 +1,13 @@
+:root {
+    // Common variables.
+    --default-inner-padding: 20px;
+    // Navigation layout variables.
+    --navigation-bar-initial-height: 80px;
+    --navigation-bar-inner-padding: var(--default-inner-padding);
+    // Header layout variables.
+    --header-initial-width: 320px;
+    --header-inner-padding: var(--default-inner-padding);
+    // Floating anchored menu variables.
+    --floating-menu-initial-width: 320px;
+    --floating-menu-inner-padding: var(--default-inner-padding);
+}

@@ -1,0 +1,25 @@
+@use "../../styles/mixins/RelativeContainerWrapper.scss" as *;
+
+.app-header {
+    &__content {
+        &__category {
+            @include RelativeContainerWrapper;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            &__label {
+                font-family: var(--font-semibold);
+                text-transform: uppercase;
+                color: var(--color-text-muted);
+            }
+
+            &__items {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    }
+}

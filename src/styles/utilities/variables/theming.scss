@@ -1,0 +1,136 @@
+// Default (dark, orange) values live on bare :root so the app still looks
+// correct for the brief moment before ThemeProvider stamps the
+// data-theme/data-accent attributes.
+:root,
+:root[data-theme="dark"] {
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+
+    --color-text-active: #E6E7E8;
+    --color-text-muted: #A3A4A6;
+    --color-text-disabled: #707173;
+    --color-text-warning-red: #E84C3D;
+    --color-text-warning-yellow: #E3B341;
+    --color-text-success-green: #70C46F;
+
+    --color-surface: #2B2C2E;
+    --color-surface-light: #3A3B3D;
+    --color-surface-dark: #242526;
+
+    --color-panel: #3A3B3D;
+    --color-panel-hover: #434447;
+    --color-panel-active: #505255;
+    --color-panel-text-muted: #A3A4A6;
+    --color-panel-text-active: #E6E7E8;
+
+    // Default accent (orange), tuned for the dark surfaces above.
+    --color-accent: #FFA646;
+    --color-accent-hover: #FFB766;
+    --color-accent-active: #E78F2F;
+    --color-accent-soft: rgba(255, 166, 70, 0.15);
+}
+
+:root[data-theme="light"] {
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+
+    --color-text-active: #1B1C1D;
+    --color-text-muted: #5B5C5E;
+    --color-text-disabled: #9A9B9D;
+    --color-text-warning-red: #D6392B;
+    --color-text-warning-yellow: #B9860A;
+    --color-text-success-green: #2F9E4F;
+
+    --color-surface: #F5F5F6;
+    --color-surface-light: #FFFFFF;
+    --color-surface-dark: #E7E7E8;
+
+    --color-panel: #FFFFFF;
+    --color-panel-hover: #EDEDEE;
+    --color-panel-active: #E0E1E2;
+    --color-panel-text-muted: #5B5C5E;
+    --color-panel-text-active: #1B1C1D;
+
+    // Default accent (orange), tuned for the light surfaces above.
+    --color-accent: #E78F2F;
+    --color-accent-hover: #FFA646;
+    --color-accent-active: #C97423;
+    --color-accent-soft: rgba(231, 143, 47, 0.15);
+}
+
+// Accent color picker — chosen independently of dark/light mode. "orange" is
+// the default and already set above, so only the other hues need an override
+// here, once per mode so each stays readable on that mode's surfaces.
+:root[data-theme="dark"][data-accent="blue"] {
+    --color-accent: #4C9AFF;
+    --color-accent-hover: #74B2FF;
+    --color-accent-active: #2E7BDB;
+    --color-accent-soft: rgba(76, 154, 255, 0.15);
+}
+
+:root[data-theme="dark"][data-accent="purple"] {
+    --color-accent: #B287F0;
+    --color-accent-hover: #C6A4F5;
+    --color-accent-active: #9566D9;
+    --color-accent-soft: rgba(178, 135, 240, 0.15);
+}
+
+:root[data-theme="dark"][data-accent="green"] {
+    --color-accent: #5FD897;
+    --color-accent-hover: #7EE3AB;
+    --color-accent-active: #3FB87C;
+    --color-accent-soft: rgba(95, 216, 151, 0.15);
+}
+
+:root[data-theme="dark"][data-accent="pink"] {
+    --color-accent: #F2678F;
+    --color-accent-hover: #F686A5;
+    --color-accent-active: #D6446E;
+    --color-accent-soft: rgba(242, 103, 143, 0.15);
+}
+
+:root[data-theme="light"][data-accent="blue"] {
+    --color-accent: #2E6FE0;
+    --color-accent-hover: #4C88F0;
+    --color-accent-active: #1F53B8;
+    --color-accent-soft: rgba(46, 111, 224, 0.15);
+}
+
+:root[data-theme="light"][data-accent="purple"] {
+    --color-accent: #7B45C9;
+    --color-accent-hover: #9563DB;
+    --color-accent-active: #5F32A3;
+    --color-accent-soft: rgba(123, 69, 201, 0.15);
+}
+
+:root[data-theme="light"][data-accent="green"] {
+    --color-accent: #23A868;
+    --color-accent-hover: #34BF7C;
+    --color-accent-active: #178A54;
+    --color-accent-soft: rgba(35, 168, 104, 0.15);
+}
+
+:root[data-theme="light"][data-accent="pink"] {
+    --color-accent: #D8395F;
+    --color-accent-hover: #E85778;
+    --color-accent-active: #B32449;
+    --color-accent-soft: rgba(216, 57, 95, 0.15);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-panel);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-panel-hover);
+}

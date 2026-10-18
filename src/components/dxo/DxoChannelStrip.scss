@@ -1,0 +1,53 @@
+.mixer-channel.dxo-channel {
+    width: 52px;
+    flex: 0 0 auto;
+    padding: 4px 6px;
+    border-radius: 6px;
+
+    .mixer-channel__channel-count {
+        &.input {
+            background: var(--color-surface-light);
+        }
+
+        &.output {
+            background: var(--color-accent-soft);
+            color: var(--color-accent);
+        }
+    }
+
+    .mixer-channel__channel-label {
+        height: 96px;
+    }
+
+    .mixer-channel__peak-meter {
+        height: 110px;
+    }
+
+    .mixer-channel__buttons__button {
+        width: 40px;
+        height: 32px;
+        align-self: center;
+
+        &.mute.active {
+            background: rgba(232, 76, 61, 0.18);
+            color: var(--color-text-warning-red);
+        }
+    }
+
+    .channel-fader {
+        height: 200px;
+    }
+
+    .channel-fader__body__current__label span {
+        white-space: nowrap;
+    }
+
+    &.selected {
+        background: var(--color-surface);
+        box-shadow: inset 0 0 0 1px var(--color-accent-soft);
+    }
+
+    &.muted .mixer-channel__peak-meter {
+        opacity: 0.35;
+    }
+}

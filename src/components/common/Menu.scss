@@ -1,0 +1,142 @@
+@use "../../styles/mixins/RelativeContainerWrapper.scss" as *;
+
+$menuBaseWidth: 320px;
+
+@keyframes MenuFadeIn {
+	0% {
+		opacity: 0;
+		transform: scale(0.95) translate(8px, -8px);
+		transform-origin: top right;
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1) translate(0, 0);
+		transform-origin: top right;
+	}
+}
+
+.app-menu-backdrop {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	inset: 0;
+	z-index: 100;
+
+	&__container {
+		@include RelativeContainerWrapper;
+	}
+}
+
+.app-menu {
+	width: $menuBaseWidth;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 101;
+	background: var(--color-surface);
+	box-shadow: 0 0 10px rgb(0, 0, 0, 25%);
+	font-size: var(--font-size-regular);
+	overflow: hidden;
+	animation: MenuFadeIn 150ms ease;
+
+	&__container {
+		width: calc($menuBaseWidth);
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		overflow: hidden;
+	}
+
+	&__titlebar {
+		width: 100%;
+		height: 40px;
+		display: flex;
+		justify-content: space-between;
+
+		&__logo {
+			width: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			overflow: hidden;
+			gap: 10px;
+			user-select: none;
+
+			img {
+				width: calc(var(--navigation-bar-initial-height) - calc(var(--navigation-bar-inner-padding)) * 2);
+				height: calc(var(--navigation-bar-initial-height) - calc(var(--navigation-bar-inner-padding)) * 2);
+				transform: scale(1.5);
+			}
+
+			span {
+				font-size: var(--font-size-large);
+			}
+		}
+
+		&__button {
+			width: 40px;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 5px;
+			cursor: pointer;
+
+			&:hover {
+				background: var(--color-panel-hover);
+			}
+		}
+	}
+
+	&__divider {
+		width: 100%;
+		height: 1px;
+		background: var(--color-surface-light);
+		margin: 10px 0;
+	}
+
+	&__category {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		&__title {
+			font-size: var(--font-size-small);
+			font-weight: 600;
+			font-family: var(--font-semibold);
+			text-transform: uppercase;
+			color: var(--color-text-muted);
+			user-select: none;
+		}
+
+		&__item {
+			border-radius: 5px;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 10px;
+			color: var(--color-text-active);
+			text-decoration: none;
+
+			&:hover {
+				color: var(--color-accent);
+			}
+
+			&__swatch {
+				width: 14px;
+				height: 14px;
+				border-radius: 50%;
+				display: inline-block;
+				flex-shrink: 0;
+				box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+			}
+
+			;
+		}
+	}
+}

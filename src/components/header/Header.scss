@@ -1,0 +1,16 @@
+.app-header {
+    padding: 20px;
+    display: flex;
+    overflow-y: auto;
+    min-height: 0;
+    border: 1px solid var(--color-surface-light);
+    border-radius: 5px;
+    max-height: calc(100vh - var(--navigation-bar-initial-height) - calc(var(--navigation-bar-inner-padding) * 2));
+
+    &.left {
+        grid-area: left;
+        overflow-y: auto;
+        min-height: 0;
+        border: none;
+    }
+}

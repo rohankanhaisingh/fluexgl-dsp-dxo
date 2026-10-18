@@ -1,0 +1,24 @@
+@use "../../styles/mixins/RelativeContainerWrapper.scss" as *;
+
+.mixer-create-channel-button {
+    width: 40px;
+    height: 100%;
+    flex: 0 0 40px;
+    user-select: none;
+    transition: background 150ms, color 150ms ease;
+    background: var(--color-panel);
+    border-radius: 5px;
+    color: var(--color-panel-text-muted);
+
+    &__container {
+        @include RelativeContainerWrapper;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover {
+        background: var(--color-panel-hover);
+        color: var(--color-panel-text-active);
+    }
+}

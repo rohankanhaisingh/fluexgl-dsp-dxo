@@ -1,0 +1,107 @@
+common:
+    application_loading_text: "Loading DSP mixer environment..."
+    navigation_bar_title: "DSP Mixer - Showcase"
+
+menu:
+    language_category_title: "Language"
+    theme_category_title: "Theme"
+    theme_dark: "Dark"
+    theme_light: "Light"
+    accent_category_title: "Accent color"
+    accent_orange: "Orange"
+    accent_blue: "Blue"
+    accent_purple: "Purple"
+    accent_green: "Green"
+    accent_pink: "Pink"
+
+audio_library_header:
+    header_title: "Explorer"
+    update_file: "Upload file"
+    audio_files_from_database: "Files from database"
+    uploaded_audio_files: "Uploaded audio files"
+
+audio_clip_settings:
+    file_name: "File name: {}"
+    file_size: "File size: {}"
+    duration: "Duration: {} second(s)"
+    sample_rate: "Sample rate: {}"
+    amount_of_channels: "Channels (usually L+R): {}"
+    id: "ID: {}"
+    dsp_audio_clip_category_title: "DSP audio clip"
+    play_audio_clip: "Play"
+    stop_audio_clip: "Stop"
+    loop_audio_clip: "Loop: {}"
+    loop_audio_clip_enabled: "enabled"
+    loop_audio_clip_disabled: "disabled"
+    destroy_audio_clip: "Destroy audio clip"
+    dsp_channels_category_title: "DSP Channels"
+    detach_from_channel: "Detach from channel"
+    attach_to_channel: "Attach to channel"
+    details_category_title: "Details"
+    cannot_attach_no_player: "Cannot attach audio clip to channel because the channel's AudioClipPlayer does not exist."
+    not_attached_yet: "This audio clip is not yet attached to a channel. Attach it first to be able to control it."
+    attached_to: "Attached to {}"
+    channel_fallback: "Channel"
+    cannot_attach_yet_no_dsp_clip: "This audio clip cannot yet be attached to a channel because no DSP audio clip has been created. Create one first before attaching it."
+    channels_selection_title: "Channels"
+    create_audio_clip: "Create audio clip"
+
+channel_settings:
+    label: "Label {}"
+    id: "Id: {}"
+    master_channel_label: "Master channel"
+    audio_clips_category_title: "Audio clips"
+    attached_effects_category_title: "Attached effects"
+    effect_controls_category_title: "Effect controls"
+    add_effect: "Add effect"
+    remove_effect: "Remove effect"
+    no_audio_clip_player: "No AudioClipPlayer found on this channel."
+    audio_clip_fallback: "Audio clip"
+    no_audio_clips_attached: "No audio clips attached."
+    effect_fallback: "Effect"
+    no_effects_applied: "No effects applied."
+    select_effect_title: "Select effect"
+    channel_fallback: "Channel"
+    channel_sends_category_title: "Sends"
+    send_controls_category_title: "Send controls"
+    no_sends: "This channel is not sent to any other channel."
+    add_send: "Add send"
+    remove_send: "Remove send"
+    select_send_target_title: "Send to channel"
+    select_send_removal_title: "Remove send"
+    master_category_title: "Master"
+    attached_to_master: "This channel is sent to the master channel."
+    detached_from_master: "This channel is not sent to the master channel, so it is not heard directly."
+    attach_to_master: "Attach to master"
+    detach_from_master: "Detach from master"
+    input_device: "Input device: {}"
+
+application_info:
+    title: "DSP Mixer"
+    about_category_title: "About"
+    about_paragraph_1: >
+        This application is an open-source application designed to demonstrate the functionalities of FluexGL DSP.
+        The goal of FluexGL DSP is to create and manipulate sound from various contexts.
+    about_paragraph_2: >
+        This project is part of the Fluex ecosystem and is currently maintained by
+        Rohan Kanhaisingh, the lead developer of this entire project.
+    disclaimer_category_title: "Disclaimer"
+    disclaimer_text: >
+        This application is continued and will be maintained over time.
+    how_to_use_category_title: "How to use"
+    how_to_use_text: >
+        Upload an audio file, create a DSP audio clip, attach it to a channel, and play it.
+        You can attach effects to each channel, but the 'ChannelPostAnalyser' effect cannot be modified
+        because it is an essential part of this mixer.
+
+mixer:
+    meter_view_title: "Meter view"
+    meter_view_peak: "Peak"
+    meter_view_waveform: "Waveform"
+    meter_view_spectrum: "Spectrum"
+    create_channel: "Create channel"
+    create_input_channel: "Create input channel"
+    select_input_device_title: "Select input device"
+    default_input_device: "Default input device"
+    input_device_fallback: "Input device {}"
+    input_device_unavailable: "Could not open the input device. Check whether microphone access is allowed."

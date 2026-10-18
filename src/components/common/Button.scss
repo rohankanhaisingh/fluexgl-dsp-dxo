@@ -1,0 +1,28 @@
+.app-button {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background: var(--color-panel);
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 150ms ease;
+
+    span {
+        font-size: var(--font-size-small);
+        overflow: hidden;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    &:hover,
+    &.disabled {
+        background: var(--color-panel-hover);
+    }
+
+    &.red {
+        color: #ff2626;
+    }
+}

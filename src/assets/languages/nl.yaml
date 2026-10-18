@@ -1,0 +1,103 @@
+common:
+    application_loading_text: "DSP mixer-omgeving laden..."
+    navigation_bar_title: "DSP Mixer - Showcase"
+menu:
+    language_category_title: "Taal"
+    theme_category_title: "Thema"
+    theme_dark: "Donker"
+    theme_light: "Licht"
+    accent_category_title: "Accentkleur"
+    accent_orange: "Oranje"
+    accent_blue: "Blauw"
+    accent_purple: "Paars"
+    accent_green: "Groen"
+    accent_pink: "Roze"
+audio_library_header:
+    header_title: "Verkenner"
+    update_file: "Upload bestand"
+    audio_files_from_database: "Bestanden uit database"
+    uploaded_audio_files: "Geüploade audiobestanden"
+audio_clip_settings:
+    file_name: "Bestandsnaam: {}"
+    file_size: "Bestandsgrootte: {}"
+    duration: "Duur: {} seconde(n)"
+    sample_rate: "Sample rate: {}"
+    amount_of_channels: "Kanalen (meestal L+R): {}"
+    id: "ID: {}"
+    dsp_audio_clip_category_title: "DSP audio clip"
+    play_audio_clip: "Afspelen"
+    stop_audio_clip: "Stop"
+    loop_audio_clip: "Herhalen: {}"
+    loop_audio_clip_enabled: "ingeschakeld"
+    loop_audio_clip_disabled: "uitgeschakeld"
+    destroy_audio_clip: "Vernietig audio clip"
+    dsp_channels_category_title: "DSP Kanalen"
+    detach_from_channel: "Ontkoppel van kanaal"
+    attach_to_channel: "Koppel aan kanaal"
+    details_category_title: "Details"
+    cannot_attach_no_player: "Kan audio clip niet koppelen aan kanaal, omdat de AudioClipPlayer van het kanaal niet bestaat."
+    not_attached_yet: "Deze audio clip is nog niet gekoppeld aan een kanaal. Koppel deze clip eerst om hem te kunnen bedienen."
+    attached_to: "Gekoppeld aan {}"
+    channel_fallback: "Kanaal"
+    cannot_attach_yet_no_dsp_clip: "Deze audio clip kan nog niet gekoppeld worden aan een kanaal, omdat er nog geen DSP audio clip is gemaakt. Maak er eerst één aan voordat je hem koppelt."
+    channels_selection_title: "Kanalen"
+    create_audio_clip: "Maak audio clip"
+channel_settings:
+    label: "Label {}"
+    id: "Id: {}"
+    master_channel_label: "Master kanaal"
+    audio_clips_category_title: "Audio clips"
+    attached_effects_category_title: "Gekoppelde effecten"
+    effect_controls_category_title: "Effect controls"
+    add_effect: "Voeg effect toe"
+    remove_effect: "Verwijder effect"
+    no_audio_clip_player: "Geen AudioClipPlayer gevonden op dit kanaal."
+    audio_clip_fallback: "Audio clip"
+    no_audio_clips_attached: "Geen audio clips gekoppeld."
+    effect_fallback: "Effect"
+    no_effects_applied: "Geen effecten toegepast."
+    select_effect_title: "Selecteer effect"
+    channel_fallback: "Kanaal"
+    channel_sends_category_title: "Sends"
+    send_controls_category_title: "Send-instellingen"
+    no_sends: "Dit kanaal wordt niet naar een ander kanaal verstuurd."
+    add_send: "Send toevoegen"
+    remove_send: "Send verwijderen"
+    select_send_target_title: "Verstuur naar kanaal"
+    select_send_removal_title: "Send verwijderen"
+    master_category_title: "Master"
+    attached_to_master: "Dit kanaal wordt naar het master kanaal verstuurd."
+    detached_from_master: "Dit kanaal wordt niet naar het master kanaal verstuurd, dus het is niet direct hoorbaar."
+    attach_to_master: "Koppel aan master"
+    detach_from_master: "Ontkoppel van master"
+    input_device: "Invoerapparaat: {}"
+application_info:
+    title: "DSP Mixer"
+    about_category_title: "Over"
+    about_paragraph_1: >
+        Deze applicatie is een open-source applicatie om de functionaliteiten van FluexGL DSP te demonstreren.
+        Het doel van FluexGL DSP is het creëren en manipuleren van geluid vanuit verschillende contexten.
+    about_paragraph_2: >
+        Dit project is onderdeel van het Fluex-ecosysteem en wordt momenteel onderhouden door
+        Rohan Kanhaisingh, de hoofdontwikkelaar van dit volledige project.
+    disclaimer_category_title: "Disclaimer"
+    disclaimer_text: >
+        Deze applicatie, DSP Mixer, wordt niet langer onderhouden, omdat de live versie wordt gebruikt.
+        Je kunt de live versie bezoeken via {}
+    how_to_use_category_title: "Hoe te gebruiken"
+    how_to_use_text: >
+        Upload een audio bestand, maak een DSP audio clip aan, koppel deze aan een kanaal en speel hem af.
+        Je kunt effecten koppelen aan elk kanaal, maar het effect 'ChannelPostAnalyser' kan niet aangepast
+        worden omdat dit een essentieel onderdeel is van deze mixer.
+
+mixer:
+    meter_view_title: "Metervisualisatie"
+    meter_view_peak: "Peak"
+    meter_view_waveform: "Waveform"
+    meter_view_spectrum: "Spectrum"
+    create_channel: "Kanaal aanmaken"
+    create_input_channel: "Input kanaal aanmaken"
+    select_input_device_title: "Selecteer invoerapparaat"
+    default_input_device: "Standaard invoerapparaat"
+    input_device_fallback: "Invoerapparaat {}"
+    input_device_unavailable: "Kon het invoerapparaat niet openen. Controleer of microfoontoegang is toegestaan."

@@ -1,0 +1,65 @@
+@use "../../styles/mixins/RelativeContainerWrapper.scss" as *;
+
+.app-window {
+    position: fixed;
+    width: 400px;
+    height: 230px;
+    min-width: 300px;
+    min-height: 200px;
+    z-index: 100;;
+    left: calc(50% - 200px);
+    top: calc(50% - 115px);
+    border-radius: 5px;
+    background: rgb(0, 0, 0, 25%);
+    color: var(--color-text-active);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgb(0, 0, 0, 25%);
+    border: 1px solid var(--color-surface-light);
+    font-size: var(--font-size-small);
+    user-select: none;
+
+    &__container {
+        @include RelativeContainerWrapper;
+        display: grid;
+        grid-template-rows: 30px auto;
+        gap: 0px;
+    }
+
+    &__resize-handle {
+        position: absolute;
+        z-index: 1;
+
+        $edge: 6px;
+        $edge-offset: -3px;
+        $corner: 14px;
+
+        &--n, &--s {
+            left: $corner;
+            right: $corner;
+            height: $edge;
+            cursor: ns-resize;
+        }
+
+        &--e, &--w {
+            top: $corner;
+            bottom: $corner;
+            width: $edge;
+            cursor: ew-resize;
+        }
+
+        &--n { top: $edge-offset; }
+        &--s { bottom: $edge-offset; }
+        &--e { right: $edge-offset; }
+        &--w { left: $edge-offset; }
+
+        &--ne, &--nw, &--se, &--sw {
+            width: $corner;
+            height: $corner;
+        }
+
+        &--ne { top: $edge-offset; right: $edge-offset; cursor: nesw-resize; }
+        &--nw { top: $edge-offset; left: $edge-offset; cursor: nwse-resize; }
+        &--se { bottom: $edge-offset; right: $edge-offset; cursor: nwse-resize; }
+        &--sw { bottom: $edge-offset; left: $edge-offset; cursor: nesw-resize; }
+    }
+}

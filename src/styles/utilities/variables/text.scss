@@ -1,0 +1,32 @@
+:root {
+    --font-black: 'Poppins Black', sans-serif;
+    --font-black-italic: 'Poppins Black Italic', sans-serif;
+    --font-bold: 'Poppins Bold', sans-serif;
+    --font-bold-italic: 'Poppins Bold Italic', sans-serif;
+    --font-extra-bold: 'Poppins Extra Bold', sans-serif;
+    --font-extra-bold-italic: 'Poppins Extra Bold Italic', sans-serif;
+    --font-extra-light: 'Poppins Extra Light', sans-serif;
+    --font-extra-light-italic: 'Poppins Extra Light Italic', sans-serif;
+    --font-italic: 'Poppins Italic', sans-serif;
+    --font-light: 'Poppins Light', sans-serif;
+    --font-light-italic: 'Poppins Light Italic', sans-serif;
+    --font-medium: 'Poppins Medium', sans-serif;
+    --font-medium-italic: 'Poppins Medium Italic', sans-serif;
+    --font-regular: 'Poppins Regular', sans-serif;
+    --font-regular-italic: 'Poppins Regular Italic', sans-serif;
+    --font-semibold: 'Poppins Semi Bold', sans-serif;
+    --font-semibold-italic: 'Poppins Semi Bold Italic', sans-serif;
+    --font-thin: 'Poppins Thin', sans-serif;
+    --font-thin-italic: 'Poppins Thin Italic', sans-serif;
+    --default-font-family: var(--font-regular);
+    // Text colors
+    --primary-text-color: #000000;
+    --secondary-text-color: #ffffff;
+    // Text sizes
+    --font-size-extra-small: 10px;
+    --font-size-regular: 16px;
+    --font-size-small: 12px;
+    --font-size-medium: 20px;
+    --font-size-large: 28px;
+    --font-size-extra-large: 36px;
+}

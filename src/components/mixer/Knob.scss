@@ -1,0 +1,59 @@
+.knob {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    touch-action: none;
+    cursor: pointer;
+
+    &__body {
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        border-radius: 50%;
+        background: var(--color-panel);
+        border: 1px solid var(--color-accent-soft);
+        position: relative;
+        transition: box-shadow 150ms, background 150ms ease;
+
+        &__handle {
+            position: absolute;
+            top: calc(50% - 1px);
+            left: 50%;
+            width: calc(50% - 5px);
+            height: 2px;
+            background: var(--color-accent);
+            transform-origin: 0% 50%;
+            z-index: 2;
+            transition: width 150ms ease;
+        }
+
+        &__center {
+            width: 6px;
+            height: 6px;
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            border-radius: 10px;
+            background: var(--color-accent);
+            z-index: 1;
+            transition: width 150ms, height 150ms ease;
+        }
+    }
+
+    &.is-dragging {
+        .knob__body {
+            background: var(--color-panel-active);
+        }
+        .knob__body__handle {
+            width: calc(50%);
+        }
+    }
+
+    &:hover {
+        .knob__body {
+            background: var(--color-panel-hover);
+        }
+    }
+}

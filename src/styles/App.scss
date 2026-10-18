@@ -1,0 +1,16 @@
+.app-layout {
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-surface);
+    color: var(--color-text-active);
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: var(--navigation-bar-initial-height) 1fr;
+        grid-template-columns: var(--header-initial-width) 1fr;
+        grid-template-areas:
+            "nav nav" "left main";
+    }
+}

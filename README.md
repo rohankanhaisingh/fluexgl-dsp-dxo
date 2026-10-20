@@ -1,5 +1,7 @@
 # DXO Mixer
 
+![alt text](image.png)
+
 Desktop app (Electron) for the Omnitronic DXO-48PRO MK2, built on the [DSP-Mixer](https://github.com/rohankanhaisingh/DSP-Mixer) UI. It talks to the processor over USB (a CDC serial port, vendor id `0684`) with the protocol that DXOControl 4.0.1 uses.
 
 ## Running
